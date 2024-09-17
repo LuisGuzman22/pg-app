@@ -1,3 +1,4 @@
+import NavButtons from "@/components/nav-buttons";
 import UserData from "@/components/user-data";
 import { View, Text, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -6,7 +7,9 @@ export default function Main() {
   return (
     <View style={styles.container}>
       <UserData />
-      <SafeAreaView style={styles.navContainer}></SafeAreaView>
+      <SafeAreaView style={styles.navContainer}>
+        <NavButtons />
+      </SafeAreaView>
     </View>
   );
 }

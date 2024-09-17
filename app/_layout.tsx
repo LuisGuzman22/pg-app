@@ -36,7 +36,8 @@ export default function RootLayout() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+      <ThemeProvider value={DefaultTheme}>
+        {/* <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}> */}
         <Stack>
           <Stack.Screen options={{ headerShown: false }} name="index" />
           <Stack.Screen
@@ -51,6 +52,17 @@ export default function RootLayout() {
             name="main"
           />
           <Stack.Screen name="+not-found" />
+          <Stack.Screen
+            options={{
+              headerTitle: () => <Header />,
+              headerTitleAlign: "center",
+              headerShadowVisible: false,
+              headerStyle: {
+                backgroundColor: "#5A61FF",
+              },
+            }}
+            name="asign-rol"
+          />
         </Stack>
       </ThemeProvider>
     </QueryClientProvider>
