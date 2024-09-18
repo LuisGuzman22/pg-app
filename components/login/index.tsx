@@ -19,15 +19,21 @@ export default function Login() {
       <TextInput
         style={styles.input}
         placeholder="Usuario"
+        id="user"
+        mode="flat"
+        dense={true}
         //   onChangeText={onChangeText}
-        //   value={text}
+        value={""}
       />
       <TextInput
         style={styles.input}
-        placeholder="Usuario"
+        placeholder="Contraseña"
+        id="password"
         secureTextEntry={true}
+        mode="flat"
+        dense={true}
         //   onChangeText={onChangeText}
-        //   value={text}
+        value={""}
       />
       <Button
         mode="elevated"
